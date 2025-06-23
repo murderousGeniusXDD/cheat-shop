@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%for ch in cheat%}
+<h2>{{ch.name|title}}</h2>
+{%if ch.image%}
+<img src="{{ch.image.url}}" alt="{{ch.name}}">
+{%endif%}
+<a href="{%url 'mainapp:detail_cheat' ch.pk%}">Понравился Чит? Смотри подробнее...|title</a>
+{%endfor%}
+
+</body>
+</html>
